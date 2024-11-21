@@ -131,7 +131,8 @@ var init_timeline = function (data) {
   
 }  
 
-const socket = io.connect('http://192.168.1.110:5000');
+//const socketmio = io.connect('http://192.168.1.110:5000');
+const socketmio = io.connect('http://127.0.0.1:5000');
 
 // // Obtener datos iniciales
 // fetch('/data')
@@ -150,18 +151,20 @@ const socket = io.connect('http://192.168.1.110:5000');
 //     // .then(data => init_timeline(data));
 
 // Recibir datos nuevos a través del WebSocket
-   socket.on('update_data', function(data) {
+ socketmio.on('update_data', function(data) {
     const updatedData = data.map(item => {
               item.date = new Date(item.anio, item.mes, item.dia);  // Cambia el valor de 'date' a un objeto Date
               return item;})
     if (data_save != null){
-      data.sort((a, b) => b.hito - a.hito);
+      //data.sort((a, b) => b.hito - a.hito);
+      //data.sort((a, b) => b.hito - a.hito);
+      ultimo_momento = data.at(-1);
       Toastify({
         newWindow: true,
         close: true,
         oldestFirst:false,
         duration: 300000,
-        text: data[0].anio + ' - ' + data[0].name + ': ' + data[0].des,
+        text: ultimo_momento.anio + ' - ' + ultimo_momento.name + ': ' + ultimo_momento.des,
         className: "info",
         style: {
           background: "linear-gradient(to right, #018979, #618425)",
