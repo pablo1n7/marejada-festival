@@ -121,6 +121,7 @@ def handle_new_data(new_data):
     # emit('update_data', data_sorted, broadcast=True)
 
 if __name__ == '__main__':
-    socketio.run(app, 
+    socketio.run(app,
+                 host='0.0.0.0',
                  port='5000',
                  debug=True)

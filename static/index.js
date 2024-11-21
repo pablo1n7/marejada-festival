@@ -75,7 +75,7 @@ var init_timeline = function (data) {
     if (d.data.user == 0){
       return '#1D1F20';
     }else{
-      return '#96c93d';
+      return '#6d932a';
     }
     
   }
@@ -131,7 +131,7 @@ var init_timeline = function (data) {
   
 }  
 
-const socket = io.connect('http://127.0.0.1:5000');
+const socket = io.connect('http://192.168.1.110:5000');
 
 // // Obtener datos iniciales
 // fetch('/data')
@@ -164,7 +164,7 @@ const socket = io.connect('http://127.0.0.1:5000');
         text: data[0].anio + ' - ' + data[0].name + ': ' + data[0].des,
         className: "info",
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "linear-gradient(to right, #018979, #618425)",
         }
       }).showToast();
     }
