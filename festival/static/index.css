@@ -1,0 +1,71 @@
+body { 
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: black;
+  } 
+  
+  .info{
+    width: 20%;
+  }
+  .error{
+    width: 20%;
+  }
+  
+  canvas { 
+    display: block; 
+    vertical-align: bottom;
+  } 
+  
+  h1 {
+    left: 11%;
+    top: 10%;
+    color: black;
+    z-index: 3;
+    position: absolute;
+    font-size: 5em;
+    background-color: white;
+  }
+  
+  p {
+      left: 11%;
+    top: 25%;
+    color: black;
+    z-index: 3;
+    position: absolute;
+    font-size: 1.5em;
+    width: 60%;
+    border: 0px solid black;
+    background-color: white;
+  }
+  
+  #particles-js { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("https://i.imgsafe.org/9b577c7dea.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index:  2;
+  }
+  
+  .infographic {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    position: absolute;
+    z-index:  3;
+    text-align: center;
+    height: auto;
+  }
+  
+  line.timeline {
+    stroke-width: 20px;
+    stroke: black;
+  }
+  
+  circle.dot {
+    fill: #D4F6F0;
+    
+  }
