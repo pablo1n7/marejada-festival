@@ -48,10 +48,12 @@ body {
     background-size: cover;
     top: 0;
     z-index:  2;
+    opacity: 0.4;               /* Good browsers */
+
   }
   
   .infographic {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 20%;
     margin-left: 20%;
     position: absolute;
